@@ -1,0 +1,63 @@
+Task
+
+You must write a program that handles random numbers. The user must first enter how many random numbers are needed (this number can be any number from 1 - Integer.MAX_VALUE). Then, the program should randomize (random values are to be in the range 0 - 999) the specified numbers and place these in an integer array int [] that has exactly the required size - i.e., neither larger nor smaller. The program should not crash, no matter what the user enters.
+
+    NOTE 1: Using ArrayList, Vector, or any other similar Java class in this task is prohibited.
+
+    NOTE 2: Not all systems cannot allocate a large amount of memory, which gives an error message "java.lang.OutOfMemoryError". You can use the try-catch block to handle this error and show an appropriate message saying it is impossible to handle the entered number. Below is an Example
+
+as4_max_int.png
+
+The program,
+
+    must print the numbers in the order in which they were randomized.
+    order the random numbers so that they are in the order of least even integers to largest even integers
+    order the largest odd integers to the least odd integers. It is allowed to use separate arrays of the same size as the original to store the odd and even numbers.
+    Finally, the program should print the numbers in the order they are in the array with a punctuation mark between even and odd numbers and the number of even and odd numbers. Please see the example run below. Your output should look the same as the example run below. Only the numbers shown will differ due to randomization.
+
+Begin the task by constructing a flow chart and program logic on paper. Then, describe your structure in text form (pseudocode) in the comment header (Javadoc for main class) of the program so that an outsider can understand what the program does and how your logic/algorithm works.
+Example run of the program
+
+Below, you can see what a run of the program should look like:
+
+How many random numbers in the range 0 - 999 are desired? 11
+
+Here are the random numbers:
+326 300 309 791 260 341 500 2 495 548 960
+
+Here are the random numbers arranged:
+2 260 300 326 500 548 960 - 791 495 341 309
+
+Of the above 11 numbers, 7 were even and 4 odd
+
+In case there are only odd or even numbers then output could look like below
+
+How many random numbers in the range 0 - 999 are desired? 5
+
+Here are the random numbers:
+326 300 260 500 2
+
+Here are the random numbers arranged:
+2 260 300 326 500 - No Odd Numbers
+
+Of the above 5 numbers, 5 were even and 0 odd
+
+How many random numbers in the range 0 - 999 are desired? 4
+
+Here are the random numbers:
+309 791 341 495
+
+Here are the random numbers arranged:
+No Even Numbers - 791 495 341 309
+
+Of the above 4 numbers, 0 were even and 4 odd
+
+Tip
+
+To check if a number is even, use integer division with two and test if the remainder is zero. The operator modulus % gives the remainder.
+
+For sorting, see practice problem - Arrays - Sorting.
+
+To copy values between two arrays, you can create a loop and copy one value at a time or use Java's built-in function System.arraycopy ()
+
+Note: You are not allowed to use Arrays.sort() or any other built-in function to sort the array, you must use your own sorting code (you can use the sorting algorithm and code used as an example in the course.)
